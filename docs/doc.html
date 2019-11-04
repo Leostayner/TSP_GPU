@@ -1,0 +1,1165 @@
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/LaTeX", "output/HTML-CSS"],
+    "HTML-CSS": { availableFonts: ["TeX"] }
+    });
+</script>
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<style>
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(http://fonts.gstatic.com/s/raleway/v9/-_Ctzj9b56b8RgXW8FArifk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(http://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 3.6rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.4rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.2rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.8rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 2.4rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+p {
+  margin-top: 0; }
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+@media (min-width: 400px) {}
+@media (min-width: 550px) {}
+@media (min-width: 750px) {}
+@media (min-width: 1000px) {}
+@media (min-width: 1200px) {}
+
+</style>
+
+<style>
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #666666 } /* Literal.Number.Bin */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sa { color: #BA2121 } /* Literal.String.Affix */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.dl { color: #BA2121 } /* Literal.String.Delimiter */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.fm { color: #0000FF } /* Name.Function.Magic */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.vm { color: #19177C } /* Name.Variable.Magic */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
+
+
+
+
+
+<style>
+h1.title {margin-top : 20px}
+img {max-width : 100%}
+
+#From nbconvert
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
+
+</HEAD>
+<BODY>
+    <div class ="container">
+        <div class = "row">
+            <div class = "col-md-12 twelve columns">
+<p>Leonardo Pereira Medeiros</p>
+<h1>Caixeiro Viajante (Multi-Core-GPU)</h1>
+<h2>Introdução</h2>
+<p>Este projeto consiste no estudo de técnicas mult-core na área de otimização discreta, que se aplica a problemas em que há uma sequência de escolhas, com a característica de que a solução ótima só pode ser encontrada ao enumerar todas as escolhas possíveis. Isto significa que todo algoritmo para sua solução é O(2n) ou pior.</p>
+<p>Neste projeto serão implementados dois métodos de otimização discreta, com processamento mult-core em GPU estes são: solução aleatoria e 2-opt.</p>
+<p>Solução Aleatoria: Consiste em sortear um numero de soluções aleatoriamente e selecionar a que tiver menor custo, esta é uma solução simploria, com resultados não ideais, porem trata-se de uma solução inicial satisfatoria.</p>
+<p>2-opt (local search) : Consiste em aplicar a heuristica 2-opt sobre o metodo de solução aleatoria, aplicando operações em cada iteração para melhorar o parâmetro de critério. Embora este seja um método bastante rápido, seu valor final,em algumas execuções, será apenas próximo do valor ideal, pois esse método é afetado por mínimos locais, logo o processo de inicialização aleatória e melhoria e executado diversas vezes, para reduzir esse efeito colateral.</p>
+<p>Esse estudo de otimicação ja foi realizado em outro projeto porem aplicando tecnicas multcore em CPU, A fim de tornar a analise de otmização mais rica, os resultados obtidos no projeto em CPU serão adicionados a seção de analises para serem comparados com os resultados gerados pela implementação em GPU. A fim de concretizar possiveis vantagens e desvantages de cada aplicação. definindo a que possui melhor desempenho sobre tal tema.</p>
+<h2>GPU e CPU</h2>
+<p>Enquanto a CPU possui um design orientado a minimizar a latencia, unidades logicas aritmeticas potentes, caches grandes, controle sofisticado e uma quantidade reduzida de cores. As Gpus possuem um design orientado a minimizar o thoughput, com unidades aritmeticas simples, caches reduzidos e uma quantidade massiva de cores.</p>
+<p>Dada essa diferença as CPUs podem ser ate 10x mais rapidas que as GPUs para codigo sequencial, enquanto a GPUs podem ser 10x mais raoidas que as CPUs para codigos paralelos.</p>
+<p><img alt="alt text" src="./figures/cpu.png" />
+<img alt="alt text" src="./figures/gpu.png" /></p>
+<p>Para utilizar todo o poder de processamento da GPU utiliza-se o CUDA(Compute Unified Device Architecture), que é uma engine de computação desenvolvida pela Nvidia, que trabalha sobre a estrutura de divisão de memória da GPU em que a thread é a menor unidade de tarefa, essas threads são agrupadas em blocos, em que as threads de um mesmo bloco podem se comunicar e se sincronizar. Os blocos por sua vez são organizados em grids, onde deverão ter
+a mesma dimensão (figura 2), executando a mesma função de kernel, podendo a grid ser
+bidimensional ou tridimensional (figura 3).</p>
+<p><img alt="alt text" src="./figures/device.png" /></p>
+<h2>O Problema</h2>
+<p>Para aplicar os conceitos de otimização discreta foi implementado o problema do Caixeiro Viajante, que consiste em determinar a menor rota para percorrer uma série de cidades(sem repetições) e retornar a cidade de origem. </p>
+<p>Este problema foi inspirado na necessidade dos vendedores em realizar entregas em diversos locais, percorrendo o menor caminho possível, e consequentemente reduzindo o tempo necessário para a viagem e os possíveis custos com transporte e combustível.</p>
+<p><img alt="alt text" src="./figures/cx.png" /></p>
+<h2>Estrutura Do projeto</h2>
+<p>O projeto está estruturado de forma que cada método implementado possui seu respectivo arquivo.cpp, esses arquivos possuem uma função main, responsável por definir o fluxo de dados entre CPU e GPU, conforme a figura X. Para aplicar o método de otimização discreta de forma paralela sobre o conjunto de dados, há dois kernels, definidos pela flag <strong>global</strong>: </p>
+<p><strong>global</strong> points_distance(1 dimensão): Pré calcula a distancias entre todos os pontos</p>
+<p><strong>global</strong> path_dist(2 dimenções): Calcula a distancia de um caminho gerado aleatoriamente.  </p>
+<p>Também há duas funções auxiliares em GPU, definidas pela flag <strong>device</strong> : 
+<strong>device</strong> dist: Calcula a distância entre dois pontos</p>
+<p><strong>device</strong> path dist: Calcula a distância total de uma sequência de pontos.</p>
+<p><img alt="alt text" src="./figures/fluxo.png" /></p>
+<p>Parte1: Copia dados CPU -&gt; GPU
+Parte2: Processa dados na GPU
+Parte3: Copia resultados GPU -&gt; CPU</p>
+<h2>Testes</h2>
+<p>Os inputs selecionados para testar o desempenho da aplicação de técnicas de otimização discreta foram formulados de forma a tentar levar ao máximo o processamento da GPU. Como o programa exige mais processamento quando há muitos pontos que o caixeiro deve percorrer, esse valor foi testado de forma crescente, e com grandes intervalos de iterações máximas, a fim de tentar tornar mais visível o ganho de desempenho ao aplicar essa técnica para diferentes demandas de processamento.</p>
+<p>Os seguintes inputs foram testados:</p>
+<ul>
+<li>Input1: N = 100</li>
+<li>Input2: N = 500 </li>
+<li>Input3: N = 1000 </li>
+<li>Input4: N = 10000</li>
+</ul>
+<p>Em que N representa o número de pontos no sistema.</p>
+<p>Definido como variável de desempenho o tempo de execução do programa, foi utilizada a estrutura cudaEvent_t para mensurar esta informação, estrutura esta que permite obter este parametro no contexto da GPU.</p>
+<p>Como deseja-se medir apenas o desempenho do algoritmo do caixeiro viajante a medição não leva em conta o tempo gasto na leitura do arquivo de input e outros processos similares.</p>
+<h3>Resultados</h3>
+
+<div class="highlight"><pre><span></span><span class="c1">##import dependences</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+ 
+<span class="c1">##files</span>
+<span class="n">dir_fil</span> <span class="o">=</span> <span class="s2">&quot;../build/&quot;</span>
+<span class="n">files</span>    <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;random_sol&quot;</span><span class="p">,</span> <span class="s2">&quot;random_sol_op2&quot;</span><span class="p">]</span>
+
+<span class="n">dir_inp</span> <span class="o">=</span> <span class="s2">&quot;../inputs/&quot;</span>
+<span class="n">inputs</span>   <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;input1&quot;</span><span class="p">,</span> <span class="s2">&quot;input2&quot;</span><span class="p">,</span> <span class="s2">&quot;input3&quot;</span><span class="p">,</span> <span class="s2">&quot;input4&quot;</span><span class="p">]</span>
+ 
+<span class="n">n_sizes</span>   <span class="o">=</span> <span class="p">[]</span>
+<span class="n">dic</span>       <span class="o">=</span> <span class="p">{}</span>
+ 
+<span class="c1">## Run files and storage output</span>
+<span class="k">for</span> <span class="nb">input</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">:</span>
+    <span class="n">dic</span><span class="p">[</span><span class="nb">input</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+ 
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">dir_fil</span> <span class="o">+</span> <span class="n">f</span> <span class="o">+</span> <span class="s2">&quot; &lt; &quot;</span> <span class="o">+</span> <span class="n">dir_inp</span> <span class="o">+</span> <span class="nb">input</span>
+        <span class="n">stout</span>   <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span>
+        <span class="n">dic</span><span class="p">[</span><span class="nb">input</span><span class="p">][</span><span class="n">f</span><span class="p">]</span>  <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">stout</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+        
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">dir_inp</span> <span class="o">+</span> <span class="nb">input</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">nrect</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="n">n_sizes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">nrect</span><span class="p">))</span>
+    
+<span class="c1">## Generate Dataframe </span>
+<span class="n">s0</span> <span class="o">=</span> <span class="p">[</span><span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input1&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input2&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input3&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input4&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol&quot;</span><span class="p">]]</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="p">[</span><span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input1&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol_op2&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input2&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol_op2&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input3&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol_op2&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input4&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol_op2&quot;</span><span class="p">]]</span>
+
+ 
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;random_sol&quot;</span><span class="p">:</span><span class="n">s0</span><span class="p">,</span> <span class="s2">&quot;random_sol_op2&quot;</span><span class="p">:</span><span class="n">s1</span><span class="p">,},</span> <span class="n">index</span> <span class="o">=</span> <span class="n">n_sizes</span><span class="p">)</span>
+ 
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+ 
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">logy</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tempo de Execução X Número de Pontos&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Número de Pontos&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Tempo de execução (s)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre>
+<span class="ansi-red-
+fg">---------------------------------------------------------------------------</span><span
+class="ansi-red-fg">CalledProcessError</span>
+Traceback (most recent call last)<span class="ansi-green-
+fg">&lt;ipython-input-1-765fab41fe60&gt;</span> in <span class="ansi-
+cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     22</span>     <span
+class="ansi-green-fg">for</span> f <span class="ansi-green-
+fg">in</span> files<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     23</span>
+command <span class="ansi-blue-fg">=</span> dir_fil <span class="ansi-
+blue-fg">+</span> f <span class="ansi-blue-fg">+</span> <span
+class="ansi-blue-fg">&#34; &lt; &#34;</span> <span class="ansi-blue-
+fg">+</span> dir_inp <span class="ansi-blue-fg">+</span> input
+<span class="ansi-green-fg">---&gt; 24</span><span class="ansi-red-
+fg">         </span>stout   <span class="ansi-blue-fg">=</span>
+subprocess<span class="ansi-blue-fg">.</span>check_output<span
+class="ansi-blue-fg">(</span>command<span class="ansi-blue-
+fg">,</span> stderr<span class="ansi-blue-fg">=</span>subprocess<span
+class="ansi-blue-fg">.</span>STDOUT<span class="ansi-blue-fg">,</span>
+shell<span class="ansi-blue-fg">=</span><span class="ansi-green-
+fg">True</span><span class="ansi-blue-fg">)</span><span class="ansi-
+blue-fg">.</span>decode<span class="ansi-blue-fg">(</span>sys<span
+class="ansi-blue-fg">.</span>stdout<span class="ansi-blue-
+fg">.</span>encoding<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     25</span>
+dic<span class="ansi-blue-fg">[</span>input<span class="ansi-blue-
+fg">]</span><span class="ansi-blue-fg">[</span>f<span class="ansi-
+blue-fg">]</span>  <span class="ansi-blue-fg">=</span> float<span
+class="ansi-blue-fg">(</span>stout<span class="ansi-blue-
+fg">.</span>split<span class="ansi-blue-fg">(</span><span class="ansi-
+blue-fg">&#34;\n&#34;</span><span class="ansi-blue-fg">)</span><span
+class="ansi-blue-fg">[</span><span class="ansi-blue-fg">-</span><span
+class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span><span
+class="ansi-blue-fg">.</span>split<span class="ansi-blue-
+fg">(</span><span class="ansi-blue-fg">&#34;:&#34;</span><span
+class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span
+class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span
+class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     26</span>
+<span class="ansi-green-fg">/usr/lib/python3.6/subprocess.py</span> in
+<span class="ansi-cyan-fg">check_output</span><span class="ansi-blue-
+fg">(timeout, *popenargs, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    354</span>
+<span class="ansi-green-intense-fg ansi-bold">    355</span>
+return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+<span class="ansi-green-fg">--&gt; 356</span><span class="ansi-red-
+fg">                **kwargs).stdout
+</span><span class="ansi-green-intense-fg ansi-bold">    357</span>
+<span class="ansi-green-intense-fg ansi-bold">    358</span>
+<span class="ansi-green-fg">/usr/lib/python3.6/subprocess.py</span> in
+<span class="ansi-cyan-fg">run</span><span class="ansi-blue-
+fg">(input, timeout, check, *popenargs, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    436</span>
+<span class="ansi-green-fg">if</span> check <span class="ansi-green-
+fg">and</span> retcode<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    437</span>
+raise CalledProcessError(retcode, process.args,
+<span class="ansi-green-fg">--&gt; 438</span><span class="ansi-red-
+fg">                                      output=stdout,
+stderr=stderr)
+</span><span class="ansi-green-intense-fg ansi-bold">    439</span>
+<span class="ansi-green-fg">return</span> CompletedProcess<span
+class="ansi-blue-fg">(</span>process<span class="ansi-blue-
+fg">.</span>args<span class="ansi-blue-fg">,</span> retcode<span
+class="ansi-blue-fg">,</span> stdout<span class="ansi-blue-
+fg">,</span> stderr<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    440</span>
+<span class="ansi-red-fg">CalledProcessError</span>: Command
+&#39;../build/random_sol_op2 &lt; ../inputs/input3&#39; returned non-
+zero exit status 134.
+</pre></div>
+
+<h2>Resultados NVPROF</h2>
+
+<div class="highlight"><pre><span></span><span class="n">s0</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span> <span class="c1">## Valores obtidos com o nvprof</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;random_sol&quot;</span><span class="p">:</span><span class="n">s0</span><span class="p">,</span> <span class="s2">&quot;random_sol_op2&quot;</span><span class="p">:</span><span class="n">s1</span><span class="p">,},</span> <span class="n">index</span> <span class="o">=</span> <span class="n">n_sizes</span><span class="p">)</span>
+ 
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+ 
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">logy</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tempo de Execução X Número de Pontos&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Número de Pontos&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Tempo de execução (s)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre>
+<span class="ansi-red-
+fg">---------------------------------------------------------------------------</span><span
+class="ansi-red-fg">ValueError</span>
+Traceback (most recent call last)<span class="ansi-green-
+fg">/usr/lib/python3/dist-packages/pandas/core/internals.py</span> in
+<span class="ansi-cyan-
+fg">create_block_manager_from_arrays</span><span class="ansi-blue-
+fg">(arrays, names, axes)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4637</span>
+blocks <span class="ansi-blue-fg">=</span> form_blocks<span
+class="ansi-blue-fg">(</span>arrays<span class="ansi-blue-fg">,</span>
+names<span class="ansi-blue-fg">,</span> axes<span class="ansi-blue-
+fg">)</span>
+<span class="ansi-green-fg">-&gt; 4638</span><span class="ansi-red-
+fg">         </span>mgr <span class="ansi-blue-fg">=</span>
+BlockManager<span class="ansi-blue-fg">(</span>blocks<span
+class="ansi-blue-fg">,</span> axes<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4639</span>
+mgr<span class="ansi-blue-fg">.</span>_consolidate_inplace<span
+class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">/usr/lib/python3/dist-
+packages/pandas/core/internals.py</span> in <span class="ansi-cyan-
+fg">__init__</span><span class="ansi-blue-fg">(self, blocks, axes,
+do_integrity_check, fastpath)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3032</span>
+<span class="ansi-green-fg">if</span> do_integrity_check<span
+class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 3033</span><span class="ansi-red-
+fg">             </span>self<span class="ansi-blue-
+fg">.</span>_verify_integrity<span class="ansi-blue-fg">(</span><span
+class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3034</span>
+<span class="ansi-green-fg">/usr/lib/python3/dist-
+packages/pandas/core/internals.py</span> in <span class="ansi-cyan-
+fg">_verify_integrity</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3243</span>
+<span class="ansi-green-fg">if</span> block<span class="ansi-blue-
+fg">.</span>_verify_integrity <span class="ansi-green-fg">and</span>
+block<span class="ansi-blue-fg">.</span>shape<span class="ansi-blue-
+fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-
+fg">:</span><span class="ansi-blue-fg">]</span> <span class="ansi-
+blue-fg">!=</span> mgr_shape<span class="ansi-blue-fg">[</span><span
+class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">:</span><span
+class="ansi-blue-fg">]</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 3244</span><span class="ansi-red-
+fg">                 </span>construction_error<span class="ansi-blue-
+fg">(</span>tot_items<span class="ansi-blue-fg">,</span> block<span
+class="ansi-blue-fg">.</span>shape<span class="ansi-blue-
+fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-
+fg">:</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-
+fg">,</span> self<span class="ansi-blue-fg">.</span>axes<span
+class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3245</span>
+<span class="ansi-green-fg">if</span> len<span class="ansi-blue-
+fg">(</span>self<span class="ansi-blue-fg">.</span>items<span
+class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">!=</span>
+tot_items<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">/usr/lib/python3/dist-
+packages/pandas/core/internals.py</span> in <span class="ansi-cyan-
+fg">construction_error</span><span class="ansi-blue-fg">(tot_items,
+block_shape, axes, e)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4607</span>     raise
+ValueError(&#34;Shape of passed values is {0}, indices imply
+{1}&#34;.format(
+<span class="ansi-green-fg">-&gt; 4608</span><span class="ansi-red-
+fg">         passed, implied))
+</span><span class="ansi-green-intense-fg ansi-bold">   4609</span>
+<span class="ansi-red-fg">ValueError</span>: Shape of passed values is
+(2, 4), indices imply (2, 2)
+During handling of the above exception, another exception occurred:
+<span class="ansi-red-fg">ValueError</span>
+Traceback (most recent call last)<span class="ansi-green-
+fg">&lt;ipython-input-1-e4c6b4178067&gt;</span> in <span class="ansi-
+cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> s1 <span
+class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span
+class="ansi-cyan-fg">0.0</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-cyan-fg">0.0</span><span class="ansi-blue-
+fg">,</span> <span class="ansi-cyan-fg">0.0</span><span class="ansi-
+blue-fg">,</span> <span class="ansi-cyan-fg">0.0</span><span
+class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-
+fg"> </span>df <span class="ansi-blue-fg">=</span> pd<span
+class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-
+fg">(</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-
+fg">&#34;random_sol&#34;</span><span class="ansi-blue-
+fg">:</span>s0<span class="ansi-blue-fg">,</span> <span class="ansi-
+blue-fg">&#34;random_sol_op2&#34;</span><span class="ansi-blue-
+fg">:</span>s1<span class="ansi-blue-fg">,</span><span class="ansi-
+blue-fg">}</span><span class="ansi-blue-fg">,</span> index <span
+class="ansi-blue-fg">=</span> n_sizes<span class="ansi-blue-
+fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>
+display<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-
+fg">)</span>
+<span class="ansi-green-fg">/usr/lib/python3/dist-
+packages/pandas/core/frame.py</span> in <span class="ansi-cyan-
+fg">__init__</span><span class="ansi-blue-fg">(self, data, index,
+columns, dtype, copy)</span>
+<span class="ansi-green-intense-fg ansi-bold">    328</span>
+dtype=dtype, copy=copy)
+<span class="ansi-green-intense-fg ansi-bold">    329</span>
+<span class="ansi-green-fg">elif</span> isinstance<span class="ansi-
+blue-fg">(</span>data<span class="ansi-blue-fg">,</span> dict<span
+class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 330</span><span class="ansi-red-
+fg">             </span>mgr <span class="ansi-blue-fg">=</span>
+self<span class="ansi-blue-fg">.</span>_init_dict<span class="ansi-
+blue-fg">(</span>data<span class="ansi-blue-fg">,</span> index<span
+class="ansi-blue-fg">,</span> columns<span class="ansi-blue-
+fg">,</span> dtype<span class="ansi-blue-fg">=</span>dtype<span
+class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    331</span>
+<span class="ansi-green-fg">elif</span> isinstance<span class="ansi-
+blue-fg">(</span>data<span class="ansi-blue-fg">,</span> ma<span
+class="ansi-blue-fg">.</span>MaskedArray<span class="ansi-blue-
+fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    332</span>
+<span class="ansi-green-fg">import</span> numpy<span class="ansi-blue-
+fg">.</span>ma<span class="ansi-blue-fg">.</span>mrecords <span
+class="ansi-green-fg">as</span> mrecords
+<span class="ansi-green-fg">/usr/lib/python3/dist-
+packages/pandas/core/frame.py</span> in <span class="ansi-cyan-
+fg">_init_dict</span><span class="ansi-blue-fg">(self, data, index,
+columns, dtype)</span>
+<span class="ansi-green-intense-fg ansi-bold">    459</span>
+arrays <span class="ansi-blue-fg">=</span> <span class="ansi-blue-
+fg">[</span>data<span class="ansi-blue-fg">[</span>k<span class="ansi-
+blue-fg">]</span> <span class="ansi-green-fg">for</span> k <span
+class="ansi-green-fg">in</span> keys<span class="ansi-blue-
+fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    460</span>
+<span class="ansi-green-fg">--&gt; 461</span><span class="ansi-red-
+fg">         </span><span class="ansi-green-fg">return</span>
+_arrays_to_mgr<span class="ansi-blue-fg">(</span>arrays<span
+class="ansi-blue-fg">,</span> data_names<span class="ansi-blue-
+fg">,</span> index<span class="ansi-blue-fg">,</span> columns<span
+class="ansi-blue-fg">,</span> dtype<span class="ansi-blue-
+fg">=</span>dtype<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    462</span>
+<span class="ansi-green-intense-fg ansi-bold">    463</span>     <span
+class="ansi-green-fg">def</span> _init_ndarray<span class="ansi-blue-
+fg">(</span>self<span class="ansi-blue-fg">,</span> values<span
+class="ansi-blue-fg">,</span> index<span class="ansi-blue-fg">,</span>
+columns<span class="ansi-blue-fg">,</span> dtype<span class="ansi-
+blue-fg">=</span><span class="ansi-green-fg">None</span><span
+class="ansi-blue-fg">,</span> copy<span class="ansi-blue-
+fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-
+blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">/usr/lib/python3/dist-
+packages/pandas/core/frame.py</span> in <span class="ansi-cyan-
+fg">_arrays_to_mgr</span><span class="ansi-blue-fg">(arrays,
+arr_names, index, columns, dtype)</span>
+<span class="ansi-green-intense-fg ansi-bold">   6171</span>     axes
+<span class="ansi-blue-fg">=</span> <span class="ansi-blue-
+fg">[</span>_ensure_index<span class="ansi-blue-
+fg">(</span>columns<span class="ansi-blue-fg">)</span><span
+class="ansi-blue-fg">,</span> _ensure_index<span class="ansi-blue-
+fg">(</span>index<span class="ansi-blue-fg">)</span><span class="ansi-
+blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">   6172</span>
+<span class="ansi-green-fg">-&gt; 6173</span><span class="ansi-red-
+fg">     </span><span class="ansi-green-fg">return</span>
+create_block_manager_from_arrays<span class="ansi-blue-
+fg">(</span>arrays<span class="ansi-blue-fg">,</span> arr_names<span
+class="ansi-blue-fg">,</span> axes<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   6174</span>
+<span class="ansi-green-intense-fg ansi-bold">   6175</span>
+<span class="ansi-green-fg">/usr/lib/python3/dist-
+packages/pandas/core/internals.py</span> in <span class="ansi-cyan-
+fg">create_block_manager_from_arrays</span><span class="ansi-blue-
+fg">(arrays, names, axes)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4640</span>
+<span class="ansi-green-fg">return</span> mgr
+<span class="ansi-green-intense-fg ansi-bold">   4641</span>     <span
+class="ansi-green-fg">except</span> ValueError <span class="ansi-
+green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 4642</span><span class="ansi-red-
+fg">         </span>construction_error<span class="ansi-blue-
+fg">(</span>len<span class="ansi-blue-fg">(</span>arrays<span
+class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+arrays<span class="ansi-blue-fg">[</span><span class="ansi-cyan-
+fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-
+fg">.</span>shape<span class="ansi-blue-fg">,</span> axes<span
+class="ansi-blue-fg">,</span> e<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4643</span>
+<span class="ansi-green-intense-fg ansi-bold">   4644</span>
+<span class="ansi-green-fg">/usr/lib/python3/dist-
+packages/pandas/core/internals.py</span> in <span class="ansi-cyan-
+fg">construction_error</span><span class="ansi-blue-fg">(tot_items,
+block_shape, axes, e)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4606</span>
+<span class="ansi-green-fg">raise</span> ValueError<span class="ansi-
+blue-fg">(</span><span class="ansi-blue-fg">&#34;Empty data passed
+with indices specified.&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4607</span>     raise
+ValueError(&#34;Shape of passed values is {0}, indices imply
+{1}&#34;.format(
+<span class="ansi-green-fg">-&gt; 4608</span><span class="ansi-red-
+fg">         passed, implied))
+</span><span class="ansi-green-intense-fg ansi-bold">   4609</span>
+<span class="ansi-green-intense-fg ansi-bold">   4610</span>
+<span class="ansi-red-fg">ValueError</span>: Shape of passed values is
+(2, 4), indices imply (2, 2)
+</pre></div>
+
+<h3>CPU vs GPU</h3>
+
+<div class="highlight"><pre><span></span><span class="n">s0</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span> <span class="c1">## Valores obtidos com o projeto em CPU</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="p">[</span><span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input1&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol_op2&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input2&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol_op2&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input3&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol_op2&quot;</span><span class="p">],</span> <span class="n">dic</span><span class="p">[</span><span class="s2">&quot;input4&quot;</span><span class="p">][</span><span class="s2">&quot;random_sol_op2&quot;</span><span class="p">]]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;random_sol&quot;</span><span class="p">:</span><span class="n">s0</span><span class="p">,</span> <span class="s2">&quot;random_sol_op2&quot;</span><span class="p">:</span><span class="n">s1</span><span class="p">,},</span> <span class="n">index</span> <span class="o">=</span> <span class="n">n_sizes</span><span class="p">)</span>
+ 
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+ 
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">logy</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tempo de Execução X Número de Pontos&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Número de Pontos&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Tempo de execução (s)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre>
+<span class="ansi-red-
+fg">---------------------------------------------------------------------------</span><span
+class="ansi-red-fg">KeyError</span>
+Traceback (most recent call last)<span class="ansi-green-
+fg">&lt;ipython-input-1-dbb3c437c873&gt;</span> in <span class="ansi-
+cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> s0 <span
+class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span
+class="ansi-cyan-fg">0.0</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-cyan-fg">0.0</span><span class="ansi-blue-
+fg">,</span> <span class="ansi-cyan-fg">0.0</span><span class="ansi-
+blue-fg">,</span> <span class="ansi-cyan-fg">0.0</span><span
+class="ansi-blue-fg">]</span> <span class="ansi-red-fg">## Valores
+obtidos com o projeto em CPU</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-
+fg"> </span>s1 <span class="ansi-blue-fg">=</span> <span class="ansi-
+blue-fg">[</span>dic<span class="ansi-blue-fg">[</span><span
+class="ansi-blue-fg">&#34;input1&#34;</span><span class="ansi-blue-
+fg">]</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-
+fg">&#34;random_sol_op2&#34;</span><span class="ansi-blue-
+fg">]</span><span class="ansi-blue-fg">,</span> dic<span class="ansi-
+blue-fg">[</span><span class="ansi-blue-
+fg">&#34;input2&#34;</span><span class="ansi-blue-fg">]</span><span
+class="ansi-blue-fg">[</span><span class="ansi-blue-
+fg">&#34;random_sol_op2&#34;</span><span class="ansi-blue-
+fg">]</span><span class="ansi-blue-fg">,</span> dic<span class="ansi-
+blue-fg">[</span><span class="ansi-blue-
+fg">&#34;input3&#34;</span><span class="ansi-blue-fg">]</span><span
+class="ansi-blue-fg">[</span><span class="ansi-blue-
+fg">&#34;random_sol_op2&#34;</span><span class="ansi-blue-
+fg">]</span><span class="ansi-blue-fg">,</span> dic<span class="ansi-
+blue-fg">[</span><span class="ansi-blue-
+fg">&#34;input4&#34;</span><span class="ansi-blue-fg">]</span><span
+class="ansi-blue-fg">[</span><span class="ansi-blue-
+fg">&#34;random_sol_op2&#34;</span><span class="ansi-blue-
+fg">]</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> df <span
+class="ansi-blue-fg">=</span> pd<span class="ansi-blue-
+fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span
+class="ansi-blue-fg">{</span><span class="ansi-blue-
+fg">&#34;random_sol&#34;</span><span class="ansi-blue-
+fg">:</span>s0<span class="ansi-blue-fg">,</span> <span class="ansi-
+blue-fg">&#34;random_sol_op2&#34;</span><span class="ansi-blue-
+fg">:</span>s1<span class="ansi-blue-fg">,</span><span class="ansi-
+blue-fg">}</span><span class="ansi-blue-fg">,</span> index <span
+class="ansi-blue-fg">=</span> n_sizes<span class="ansi-blue-
+fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>
+<span class="ansi-red-fg">KeyError</span>: &#39;random_sol_op2&#39;
+</pre></div>
+
+<h2>Conclusão</h2>
+<h2>Especificações da Máquina utilizada</h2>
+<p>Arquitetura:                x86_64<br />
+Modo(s) operacional da CPU: 32-bit, 64-bit<br />
+Ordem dos bytes:            Little Endian<br />
+CPU(s):                     4<br />
+Lista de CPU(s) on-line:    0-3<br />
+Thread(s) per núcleo:       2<br />
+Núcleo(s) por soquete:      2<br />
+Soquete(s):                 1<br />
+Nó(s) de NUMA:              1<br />
+ID de fornecedor:           GenuineIntel<br />
+Família da CPU:             6<br />
+Modelo:                     61<br />
+Nome do modelo:             Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz<br />
+Step:                       4<br />
+CPU MHz:                    2430.779<br />
+CPU MHz máx.:               3000,0000<br />
+CPU MHz mín.:               500,0000<br />
+BogoMIPS:                   4788.89<br />
+Virtualização:              VT-x<br />
+cache de L1d:               32K<br />
+cache de L1i:               32K<br />
+cache de L2:                256K<br />
+cache de L3:                4096K<br />
+CPU(s) de nó0 NUMA:         0-3  </p>
+    <HR/>
+    <div class="footer">
+      <p>Published from <a href="doc.pmd">doc.pmd</a>
+    using <a href="http://mpastell.com/pweave">Pweave</a> 0.30.3
+    on 04-11-2019.<p></div>
+
+            </div>
+        </div>
+    </div>
+  </BODY>
+</HTML>

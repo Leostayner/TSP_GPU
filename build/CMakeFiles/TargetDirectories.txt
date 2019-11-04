@@ -1,0 +1,4 @@
+/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles/rebuild_cache.dir
+/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles/edit_cache.dir
+/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles/random_sol.dir
+/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles/random_sol_op2.dir

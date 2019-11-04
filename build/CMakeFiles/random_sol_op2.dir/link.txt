@@ -1,0 +1,1 @@
+/usr/lib/nvidia-cuda-toolkit/bin/g++   CMakeFiles/random_sol_op2.dir/random_sol_op2.cu.o CMakeFiles/random_sol_op2.dir/cmake_device_link.o -o random_sol_op2  -L"/usr/lib/x86_64-linux-gnu/stubs" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
