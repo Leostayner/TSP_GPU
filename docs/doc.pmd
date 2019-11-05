@@ -36,22 +36,21 @@ Este problema foi inspirado na necessidade dos vendedores em realizar entregas e
  
  
 ## Estrutura Do Projeto
-O projeto está estruturado de forma que cada método implementado possui seu respectivo arquivo.cpp, esses arquivos possuem uma função main, responsável por definir o fluxo de dados entre CPU e GPU. Para aplicar o método de otimização discreta de forma paralela sobre o conjunto de dados, há dois kernels, definidos pela flag __global__: 
+O projeto está estruturado de forma que cada método implementado possui seu respectivo arquivo.cpp, esses arquivos possuem uma função main, responsável por definir o fluxo de dados entre CPU e GPU. Para aplicar o método de otimização discreta de forma paralela sobre o conjunto de dados, há dois kernels, definidos pela flag __global__:
+
+* __global__ points_distance(1 dimensão): Pré calcula a distâncias entre todos os pontos
+* __global__ path_dist(2 dimenções): Calcula a distância de um caminho gerado aleatoriamente.
  
-__global__ points_distance(1 dimensão): Pré calcula a distâncias entre todos os pontos
- 
-__global__ path_dist(2 dimenções): Calcula a distância de um caminho gerado aleatoriamente.  
- 
-Também há duas funções auxiliares em GPU, definidas pela flag __device__ : 
-__device__ dist: Calcula a distância entre dois pontos
- 
-__device__ path dist: Calcula a distância total de uma sequência de pontos.
+Também há duas funções auxiliares em GPU, definidas pela flag __device__ :
+
+* __device__ dist: Calcula a distância entre dois pontos
+* __device__ path dist: Calcula a distância total de uma sequência de pontos.
  
 ![alt text](./figures/fluxo.png)
  
-Parte1: Copia dados CPU -> GPU
-Parte2: Processa dados na GPU
-Parte3: Copia resultados GPU -> CPU
+* Parte1: Copia dados CPU -> GPU
+* Parte2: Processa dados na GPU
+* Parte3: Copia resultados GPU -> CPU
  
 ## Testes
 Os inputs selecionados para testar o desempenho da aplicação de técnicas de otimização discreta foram formulados de forma a tentar levar ao máximo o processamento da GPU. Como o programa exige mais processamento quando há muitos pontos que o caixeiro deve percorrer, esse valor foi testado de forma crescente, e com grandes intervalos de iterações máximas, a fim de tentar tornar mais visível o ganho de desempenho ao aplicar essa técnica para diferentes demandas de processamento.
