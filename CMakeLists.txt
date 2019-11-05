@@ -2,16 +2,15 @@ cmake_minimum_required(VERSION 3.9)
 project (Projeto3 LANGUAGES CXX CUDA)
 
 set(SOURCE_FILES_RDS
-    "random_sol.cu"
+    "random-sol.cu"
     )
 
 set(SOURCE_FILES_OP2
-    "random_sol_op2.cu"
+    "2-opt-sol.cu"
     )
 
-add_executable(random_sol ${SOURCE_FILES_RDS})
-target_compile_options(random_sol PRIVATE -std=c++11 -O3)
+add_executable(random-sol ${SOURCE_FILES_RDS})
+target_compile_options(random-sol PRIVATE -std=c++11 -O3)
 
-
-add_executable(random_sol_op2 ${SOURCE_FILES_OP2})
-target_compile_options(random_sol_op2 PRIVATE -std=c++11 -O3)
+add_executable(2-opt-sol ${SOURCE_FILES_OP2})
+target_compile_options(2-opt-sol PRIVATE -std=c++11 -O3)

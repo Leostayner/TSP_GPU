@@ -111,84 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named random_sol
+# Target rules for targets named random-sol
 
 # Build rule for target.
-random_sol: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 random_sol
-.PHONY : random_sol
+random-sol: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 random-sol
+.PHONY : random-sol
 
 # fast build rule for target.
-random_sol/fast:
-	$(MAKE) -f CMakeFiles/random_sol.dir/build.make CMakeFiles/random_sol.dir/build
-.PHONY : random_sol/fast
+random-sol/fast:
+	$(MAKE) -f CMakeFiles/random-sol.dir/build.make CMakeFiles/random-sol.dir/build
+.PHONY : random-sol/fast
 
 #=============================================================================
-# Target rules for targets named random_sol_op2
+# Target rules for targets named 2-opt-sol
 
 # Build rule for target.
-random_sol_op2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 random_sol_op2
-.PHONY : random_sol_op2
+2-opt-sol: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 2-opt-sol
+.PHONY : 2-opt-sol
 
 # fast build rule for target.
-random_sol_op2/fast:
-	$(MAKE) -f CMakeFiles/random_sol_op2.dir/build.make CMakeFiles/random_sol_op2.dir/build
-.PHONY : random_sol_op2/fast
+2-opt-sol/fast:
+	$(MAKE) -f CMakeFiles/2-opt-sol.dir/build.make CMakeFiles/2-opt-sol.dir/build
+.PHONY : 2-opt-sol/fast
 
-random_sol.o: random_sol.cu.o
+2-opt-sol.o: 2-opt-sol.cu.o
 
-.PHONY : random_sol.o
-
-# target to build an object file
-random_sol.cu.o:
-	$(MAKE) -f CMakeFiles/random_sol.dir/build.make CMakeFiles/random_sol.dir/random_sol.cu.o
-.PHONY : random_sol.cu.o
-
-random_sol.i: random_sol.cu.i
-
-.PHONY : random_sol.i
-
-# target to preprocess a source file
-random_sol.cu.i:
-	$(MAKE) -f CMakeFiles/random_sol.dir/build.make CMakeFiles/random_sol.dir/random_sol.cu.i
-.PHONY : random_sol.cu.i
-
-random_sol.s: random_sol.cu.s
-
-.PHONY : random_sol.s
-
-# target to generate assembly for a file
-random_sol.cu.s:
-	$(MAKE) -f CMakeFiles/random_sol.dir/build.make CMakeFiles/random_sol.dir/random_sol.cu.s
-.PHONY : random_sol.cu.s
-
-random_sol_op2.o: random_sol_op2.cu.o
-
-.PHONY : random_sol_op2.o
+.PHONY : 2-opt-sol.o
 
 # target to build an object file
-random_sol_op2.cu.o:
-	$(MAKE) -f CMakeFiles/random_sol_op2.dir/build.make CMakeFiles/random_sol_op2.dir/random_sol_op2.cu.o
-.PHONY : random_sol_op2.cu.o
+2-opt-sol.cu.o:
+	$(MAKE) -f CMakeFiles/2-opt-sol.dir/build.make CMakeFiles/2-opt-sol.dir/2-opt-sol.cu.o
+.PHONY : 2-opt-sol.cu.o
 
-random_sol_op2.i: random_sol_op2.cu.i
+2-opt-sol.i: 2-opt-sol.cu.i
 
-.PHONY : random_sol_op2.i
+.PHONY : 2-opt-sol.i
 
 # target to preprocess a source file
-random_sol_op2.cu.i:
-	$(MAKE) -f CMakeFiles/random_sol_op2.dir/build.make CMakeFiles/random_sol_op2.dir/random_sol_op2.cu.i
-.PHONY : random_sol_op2.cu.i
+2-opt-sol.cu.i:
+	$(MAKE) -f CMakeFiles/2-opt-sol.dir/build.make CMakeFiles/2-opt-sol.dir/2-opt-sol.cu.i
+.PHONY : 2-opt-sol.cu.i
 
-random_sol_op2.s: random_sol_op2.cu.s
+2-opt-sol.s: 2-opt-sol.cu.s
 
-.PHONY : random_sol_op2.s
+.PHONY : 2-opt-sol.s
 
 # target to generate assembly for a file
-random_sol_op2.cu.s:
-	$(MAKE) -f CMakeFiles/random_sol_op2.dir/build.make CMakeFiles/random_sol_op2.dir/random_sol_op2.cu.s
-.PHONY : random_sol_op2.cu.s
+2-opt-sol.cu.s:
+	$(MAKE) -f CMakeFiles/2-opt-sol.dir/build.make CMakeFiles/2-opt-sol.dir/2-opt-sol.cu.s
+.PHONY : 2-opt-sol.cu.s
+
+random-sol.o: random-sol.cu.o
+
+.PHONY : random-sol.o
+
+# target to build an object file
+random-sol.cu.o:
+	$(MAKE) -f CMakeFiles/random-sol.dir/build.make CMakeFiles/random-sol.dir/random-sol.cu.o
+.PHONY : random-sol.cu.o
+
+random-sol.i: random-sol.cu.i
+
+.PHONY : random-sol.i
+
+# target to preprocess a source file
+random-sol.cu.i:
+	$(MAKE) -f CMakeFiles/random-sol.dir/build.make CMakeFiles/random-sol.dir/random-sol.cu.i
+.PHONY : random-sol.cu.i
+
+random-sol.s: random-sol.cu.s
+
+.PHONY : random-sol.s
+
+# target to generate assembly for a file
+random-sol.cu.s:
+	$(MAKE) -f CMakeFiles/random-sol.dir/build.make CMakeFiles/random-sol.dir/random-sol.cu.s
+.PHONY : random-sol.cu.s
 
 # Help Target
 help:
@@ -198,14 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... random_sol"
-	@echo "... random_sol_op2"
-	@echo "... random_sol.o"
-	@echo "... random_sol.i"
-	@echo "... random_sol.s"
-	@echo "... random_sol_op2.o"
-	@echo "... random_sol_op2.i"
-	@echo "... random_sol_op2.s"
+	@echo "... random-sol"
+	@echo "... 2-opt-sol"
+	@echo "... 2-opt-sol.o"
+	@echo "... 2-opt-sol.i"
+	@echo "... 2-opt-sol.s"
+	@echo "... random-sol.o"
+	@echo "... random-sol.i"
+	@echo "... random-sol.s"
 .PHONY : help
 
 

@@ -60,76 +60,76 @@ CMAKE_SOURCE_DIR = /home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU
 CMAKE_BINARY_DIR = /home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/random_sol.dir
+# Target rules for target CMakeFiles/random-sol.dir
 
 # All Build rule for target.
-CMakeFiles/random_sol.dir/all:
-	$(MAKE) -f CMakeFiles/random_sol.dir/build.make CMakeFiles/random_sol.dir/depend
-	$(MAKE) -f CMakeFiles/random_sol.dir/build.make CMakeFiles/random_sol.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles --progress-num=1,2,3 "Built target random_sol"
-.PHONY : CMakeFiles/random_sol.dir/all
+CMakeFiles/random-sol.dir/all:
+	$(MAKE) -f CMakeFiles/random-sol.dir/build.make CMakeFiles/random-sol.dir/depend
+	$(MAKE) -f CMakeFiles/random-sol.dir/build.make CMakeFiles/random-sol.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles --progress-num=4,5,6 "Built target random-sol"
+.PHONY : CMakeFiles/random-sol.dir/all
 
 # Include target in all.
-all: CMakeFiles/random_sol.dir/all
+all: CMakeFiles/random-sol.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/random_sol.dir/rule: cmake_check_build_system
+CMakeFiles/random-sol.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/random_sol.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/random-sol.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles 0
-.PHONY : CMakeFiles/random_sol.dir/rule
+.PHONY : CMakeFiles/random-sol.dir/rule
 
 # Convenience name for target.
-random_sol: CMakeFiles/random_sol.dir/rule
+random-sol: CMakeFiles/random-sol.dir/rule
 
-.PHONY : random_sol
-
-# clean rule for target.
-CMakeFiles/random_sol.dir/clean:
-	$(MAKE) -f CMakeFiles/random_sol.dir/build.make CMakeFiles/random_sol.dir/clean
-.PHONY : CMakeFiles/random_sol.dir/clean
+.PHONY : random-sol
 
 # clean rule for target.
-clean: CMakeFiles/random_sol.dir/clean
+CMakeFiles/random-sol.dir/clean:
+	$(MAKE) -f CMakeFiles/random-sol.dir/build.make CMakeFiles/random-sol.dir/clean
+.PHONY : CMakeFiles/random-sol.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/random-sol.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/random_sol_op2.dir
+# Target rules for target CMakeFiles/2-opt-sol.dir
 
 # All Build rule for target.
-CMakeFiles/random_sol_op2.dir/all:
-	$(MAKE) -f CMakeFiles/random_sol_op2.dir/build.make CMakeFiles/random_sol_op2.dir/depend
-	$(MAKE) -f CMakeFiles/random_sol_op2.dir/build.make CMakeFiles/random_sol_op2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles --progress-num=4,5,6 "Built target random_sol_op2"
-.PHONY : CMakeFiles/random_sol_op2.dir/all
+CMakeFiles/2-opt-sol.dir/all:
+	$(MAKE) -f CMakeFiles/2-opt-sol.dir/build.make CMakeFiles/2-opt-sol.dir/depend
+	$(MAKE) -f CMakeFiles/2-opt-sol.dir/build.make CMakeFiles/2-opt-sol.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles --progress-num=1,2,3 "Built target 2-opt-sol"
+.PHONY : CMakeFiles/2-opt-sol.dir/all
 
 # Include target in all.
-all: CMakeFiles/random_sol_op2.dir/all
+all: CMakeFiles/2-opt-sol.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/random_sol_op2.dir/rule: cmake_check_build_system
+CMakeFiles/2-opt-sol.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/random_sol_op2.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/2-opt-sol.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/build/CMakeFiles 0
-.PHONY : CMakeFiles/random_sol_op2.dir/rule
+.PHONY : CMakeFiles/2-opt-sol.dir/rule
 
 # Convenience name for target.
-random_sol_op2: CMakeFiles/random_sol_op2.dir/rule
+2-opt-sol: CMakeFiles/2-opt-sol.dir/rule
 
-.PHONY : random_sol_op2
-
-# clean rule for target.
-CMakeFiles/random_sol_op2.dir/clean:
-	$(MAKE) -f CMakeFiles/random_sol_op2.dir/build.make CMakeFiles/random_sol_op2.dir/clean
-.PHONY : CMakeFiles/random_sol_op2.dir/clean
+.PHONY : 2-opt-sol
 
 # clean rule for target.
-clean: CMakeFiles/random_sol_op2.dir/clean
+CMakeFiles/2-opt-sol.dir/clean:
+	$(MAKE) -f CMakeFiles/2-opt-sol.dir/build.make CMakeFiles/2-opt-sol.dir/clean
+.PHONY : CMakeFiles/2-opt-sol.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/2-opt-sol.dir/clean
 
 .PHONY : clean
 

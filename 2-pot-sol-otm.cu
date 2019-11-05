@@ -12,7 +12,6 @@
 #define CHARGE 10
 
 
-
 struct point{
     double x;
     double y;
@@ -161,12 +160,8 @@ int main(){
                                           thrust::raw_pointer_cast(points_GPU.data()), N_SOL, N, CHARGE, size);
     
 
-    thrust::host_vector<int> paths_CPU(paths);
-    thrust::host_vector<double> paths_dists_CPU(paths_dists);
-                                      
-
-    auto iter = thrust::min_element(paths_dists_CPU.begin(), paths_dists_CPU.end());
-    unsigned int position = iter - paths_dists_CPU.begin();
+    auto iter = thrust::min_element(paths_dists.begin(), paths_dists.end());
+    unsigned int position = iter - paths_dists.begin();
     double max_val = *iter;
 
     std::cout << max_val << " 0" << std::endl;
@@ -176,5 +171,5 @@ int main(){
  
     std::cout << std::endl;
     
-    //std::cerr << "Time: " << time_end << std::endl; 
+    //std::cerr << "Time: " << time_end << std::endl;
 }

@@ -1,0 +1,1 @@
+/usr/lib/nvidia-cuda-toolkit/bin/g++   CMakeFiles/2-opt-sol.dir/2-opt-sol.cu.o CMakeFiles/2-opt-sol.dir/cmake_device_link.o -o 2-opt-sol  -L"/usr/lib/x86_64-linux-gnu/stubs" -lcudadevrt -lcudart_static -lrt -lpthread -ldl
