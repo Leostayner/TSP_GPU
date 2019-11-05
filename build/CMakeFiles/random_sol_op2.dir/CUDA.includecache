@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/random_sol_op2.cu
+iostream
+-
+curand.h
+/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/curand.h
+curand_kernel.h
+/home/leonardo/Semestre8/supercomp/projeto-03/TSP_GPU/curand_kernel.h
+thrust/device_vector.h
+-
+thrust/host_vector.h
+-
+stdio.h
+-
+iomanip
+-
+
