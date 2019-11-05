@@ -6,14 +6,13 @@ Leonardo Pereira Medeiros
 Este projeto consiste no estudo de técnicas mult-core na área de otimização discreta, que se aplica a problemas em que há uma sequência de escolhas, com a característica de que a solução ótima só pode ser encontrada ao enumerar todas as escolhas possíveis. Isto significa que todo algoritmo para sua solução é O(2n) ou pior.
  
 Neste projeto serão implementados dois métodos de otimização discreta, com processamento mult-core em GPU, estes são:
- 
+
 * Solução Aleatória: Consiste em sortear um número de soluções aleatoriamente e selecionar a que tiver menor custo, esta é uma solução rápida e simplória, com resultados não ideais, porém trata-se de uma solução inicial satisfatória.
- 
-* 2-opt (local search) : Consiste em aplicar a heurística 2-opt sobre o método de solução aleatória, aplicando operações em cada iteração para melhorar o parâmetro de critério. Seu valor final, em algumas execuções, será apenas próximo do valor ideal, pois esse método é afetado por mínimos locais, logo o processo de inicialização aleatória e melhoria e executado diversas vezes, para reduzir esse efeito colateral.
+* 2-opt (local search): Consiste em aplicar a heurística 2-opt sobre o método de solução aleatória, aplicando operações em cada iteração para melhorar o parâmetro de critério. Seu valor final, em algumas execuções, será apenas próximo do valor ideal, pois esse método é afetado por mínimos locais, logo o processo de inicialização aleatória e melhoria e executado diversas vezes, para reduzir esse efeito colateral.
  
 Esse estudo de otimização já foi realizado em outro projeto porém aplicando técnicas multicore em CPU, A fim de tornar a análise de otimização mais rica, os resultados obtidos no projeto em CPU serão adicionados à seção de análises para serem comparados com os resultados gerados pela implementação em GPU. A fim de concretizar possíveis vantagens e desvantagens de cada aplicação, definindo a que possui melhor desempenho sobre tal tema.
  
-[Projeto em CPU](link)
+[Projeto em CPU](https://github.com/Leostayner/TSP_CPU)
  
 ## GPU vs CPU
 Enquanto a CPU possui um design orientado a minimizar a latência, unidades lógicas aritméticas potentes, caches grandes, controle sofisticado e uma quantidade reduzida de cores. As GPUs possuem um design orientado a minimizar o throughput, com unidades aritméticas simples, caches reduzidos e uma quantidade massiva de cores.
@@ -136,8 +135,8 @@ display(df)
 df.plot.bar(figsize = (20,14), fontsize=24, logy = True)
 plt.legend(prop={'size': 20})
 plt.title("Distância X Número de Pontos", fontsize = 20)
-plt.xlabel("Distância", fontsize = 20)
-plt.ylabel("Tempo de execução (s)", fontsize = 20)
+plt.xlabel("Número de Pontos", fontsize = 20)
+plt.ylabel("Distância", fontsize = 20)
 ```
  
 #### CPU vs GPU

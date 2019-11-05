@@ -2,18 +2,21 @@ import subprocess
 import sys 
 
 dirExe    = "../build/" 
-exe       = ["tsp-seq", "tsp-par"] 
+exe       = ["2-opt-sol"] 
            
-inputs = ["input1", "input2", "input3", "input4"]
-output = ["output1", "output2", "output3", "output4"]
+inputs = ["input1"]
+output = ["output1"]
+
+dir_inp = "../inputs/"
+dir_out = "../outputs/"
 
 def check_output(exe):
     print(exe)
     for input_file, outout_file in zip(inputs, output):
-        command = dirExe + exe + " < " + input_file
+        command = dirExe + exe + " < " + dir_inp + input_file
         stdout  = subprocess.check_output(command, shell=True, stderr=subprocess.DEVNULL).decode(sys.stdout.encoding)
         
-        with open(outout_file, 'r') as f:
+        with open(dir_out + outout_file, 'r') as f:
             outout_file = f.read()
         
         st = (stdout.split("\n"))

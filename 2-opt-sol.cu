@@ -133,13 +133,8 @@ int main(){
     float msecTotal = 0.0f;
     cudaEventElapsedTime(&msecTotal, start, stop);
                                       
-    
-    thrust::host_vector<int> paths_CPU(paths);
-    thrust::host_vector<double> paths_dists_CPU(paths_dists);
-                                      
-
-    auto iter = thrust::min_element(paths_dists_CPU.begin(), paths_dists_CPU.end());
-    unsigned int position = iter - paths_dists_CPU.begin();
+    auto iter = thrust::min_element(paths_dists.begin(), paths_dists.end());
+    unsigned int position = iter - paths_dists.begin();
     double max_val = *iter;
 
     std::cout << max_val << " 0" << std::endl;
